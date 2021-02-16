@@ -52,7 +52,6 @@ function manytexts() { //text will get from there
     "If a dog chews shoes, whose shoes does he choose?",
     "I thought I thought of thinking of thanking you"];
     //all defintion of the textes at the momen
-    console.log(texts)
     let rdm = Math.round(Math.random() * (texts.length - 1)); //random Number for a random row of textes
     textoutput = texts[rdm];
 
@@ -68,7 +67,6 @@ function manytexts() { //text will get from there
 //highlight the letters
 
 function highlight(index) {
-    console.log("highlight")
     var text = $("#box").text();
     text = text.substr(0, index) + "<span style='background-color: aqua'>" + text[index] + "</span>" + text.substr(index + 1, text.length);
     $("#box").html(text);
