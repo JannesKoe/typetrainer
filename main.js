@@ -39,7 +39,7 @@ var textoutput; //String with the text
 function manytexts() { //text will get from there
 
     //all defintion of the textes at the moment
-    let texts = ["he sells seashells by the seashore",
+    let texts = ["He sells seashells by the seashore",
     "How can a clam cram in a clean cream can?",
     "I scream, you scream, we all scream for ice cream",
     "I saw Susie sitting in a shoeshine shop",
@@ -48,7 +48,7 @@ function manytexts() { //text will get from there
     "Can you can a can as a canner can can a can?",
     "I have got a date at a quarter to eight; I'll see you at the gate, so don't be late",
     "You know New York, you need New York, you know you need unique New York",
-    "saw a kitten eating chicken in the kitchen",
+    "Saw a kitten eating chicken in the kitchen",
     "If a dog chews shoes, whose shoes does he choose?",
     "I thought I thought of thinking of thanking you"];
     //all defintion of the textes at the momen
