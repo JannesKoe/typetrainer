@@ -1,3 +1,4 @@
+alert("Hi");
 manytexts() //call function manytexts()
 highlight(0) //call function highlight() to highlight the first letter
 
