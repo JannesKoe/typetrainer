@@ -26,7 +26,6 @@ function input() {
         position = 0; //position updated to 0 again
         wrong = 0; //wrong updated to 0 again     
         setTimeout(manytexts, 0); //manytextes has to be called with a "setTimeout()" cause idk why
-        setTimeout(restyle, 0); //here is the same problem as before
         alert("Finish") //Finish will get alert
     }
 } //function input end
