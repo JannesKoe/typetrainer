@@ -76,9 +76,9 @@ function manytexts() { //text will get from there
 function highlight(index) {
     var text = $("#box").text();
     if (text[index] == " ") {
-        text = text.substr(0, index) + "<span class=\"highlight\">_</span>" + text.substr(index + 1, text.length);
+        text = text.substr(0, index) + "<span style='color: aqua'>_</span>" + text.substr(index + 1, text.length);
     } else {
-        text = text.substr(0, index) + "<span class=\"highlight\">" + text[index] + "</span>" + text.substr(index + 1, text.length);
+        text = text.substr(0, index) + "<span style='color: aqua'>" + text[index] + " </span>" + text.substr(index + 1, text.length);
     }
     $("#box").html(text);
 }
