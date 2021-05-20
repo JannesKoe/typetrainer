@@ -1,47 +1,45 @@
-manytexts() //call function manytexts()
-highlight(0) //call function highlight() to highlight the first letter
+manytexts()
+highlight(0)
 
-let wrong = 0; //Definition for wrong
-let position = 0; //Definition for current position in text
-document.getElementById("wrongtyping").innerHTML = "Wrong: " + wrong; //wrong output at the beginning
-let minutecache = new Date().getMinutes(); //Defines the last minute
+let wrong = 0;
+let position = 0;
+document.getElementById("wrongtyping").innerHTML = "Wrong: " + wrong;
 
 
 function input() {
 
-    document.getElementById("box").innerHTML = textoutput //textouput
+    document.getElementById("box").innerHTML = textoutput
 
-    let input = document.getElementById("myInput").value; //input definition
+    let input = document.getElementById("myInput").value;
     let wrongtyping = document.getElementById("wrongtyping");
 
-    if (textoutput[position] == input) { //check input for the same as the letters
-        position += 1; //set positon +1 for the next letters
-        setTimeout(highlight(position), 0); //call function highlight with the new position  
-        setTimeout(clearInput, 0); //to clear the input, without it wouldn't work
-    } else { //if  the input isn't the same as the letter    
-        highlight(position) //highlight call again with the old position
-        wrong += 1; //wrong get add +1
-        wrongtyping.innerHTML = "wrong: " + wrong; //wrong will updatet in the html
-        setTimeout(clearInput, 0); //call function highlight with the new position
+    if (textoutput[position] == input) {
+        position += 1;
+        setTimeout(highlight(position), 0); //highlight next letter
+        setTimeout(clearInput, 0);
+    } else {
+        highlight(position)
+        wrong += 1;
+        wrongtyping.innerHTML = "wrong: " + wrong;
+        setTimeout(clearInput, 0);
     }
 
-    if (position >= textoutput.length) { //if the text is on the end
-        position = 0; //position updated to 0 again   
-        setTimeout(manytexts, 0); //manytextes has to be called with a "setTimeout()" cause idk why
-        alert("Finish") //Finish will get alert
-        wrong = 0; //wrong updated to 0 again
+    if (position >= textoutput.length) {
+        position = 0;
+        setTimeout(manytexts, 0);
+        alert("Finish")
+        wrong = 0;
     }
-} //function input end
+}
 
-function clearInput() { //clear the input
-    document.getElementById("myInput").value = ""; //clear the input
-} //clearInput end
+function clearInput() {
+    document.getElementById("myInput").value = "";
+}
 
-var textoutput; //String with the text
+var textoutput;
 
-function manytexts() { //text will get from there
+function manytexts() {
 
-    //all defintion of the textes at the moment
     let texts = ["He sells seashells by the seashore.",
     "How can a clam cram in a clean cream can?",
     "I scream, you scream, we all scream for ice cream.",
@@ -58,23 +56,15 @@ function manytexts() { //text will get from there
     "I slit the sheet, the sheet I slit, and on the slitted sheet I sit.",
     "Good blood, bad blood."
     ];
-    //all defintion of the textes at the momen
-    let rdm = Math.round(Math.random() * (texts.length - 1)); //random Number for a random row of textes
     textoutput = texts[rdm];
 
     let box = document.getElementById("box");
 
-    box.innerHTML = textoutput; //text output in the text
 
-} //end of the manytexts
-
-//Maybe dont work cause nothing call it
-//or wrong style in span
-
-//highlight the letters
+}
 
 function highlight(index) {
-    var text = $("#box").text();
+    var text = $("#box").text(); //get the id from html
     if (text[index] == " ") {
         text = text.substr(0, index) + "<span style='color: aqua'>" + "_" + "</span>" + text.substr(index + 1, text.length);
         $("#box").html(text);
@@ -84,6 +74,3 @@ function highlight(index) {
     }
     $("#box").html(text);
 }
-//to color the background of the text type "background-color:" for the text "color:"
-
-//Maybe dont work cause nothing call it
